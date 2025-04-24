@@ -1,1 +1,12 @@
 # MiniOscillscope
+This is a little hobby project, taking the EDU09 digital oscilloscope kit from Velleman and redesigning it. I made a through-hole version using the same components as the Velleman kit. And a SMD version using all original parts.
+
+Through-Hole Version: Its been fully tested and works like a charm. Its got a BOM of 87 components and fits on a 50x50mm 2-layer board, manufactured by PCBWay. It took around 3.5 hours to solder after prepping all the components. I underestimated the IC socket size, so things got a bit tight with some parts had to be nudged sideways. I also used the wrong footprint size for the ceramic caps, so they’re a little squished, but everything still worked out in the end!
+
+SMD Version: The SMD version is a compact 25x25mm 4-layer board printed by JLCPCB. It has a BOM of 97 components, including 3 QFNs and four 0402-sized parts, the rest mostly 0603s and SOPs. It took me about 5 hours to solder under a digital microscope, using a hot air rework station and freehanded solder paste. There’s one visible bridge in the upper middle that I’ll clean up later. It’s not really an issue as those pins are already connected by a trace, but it will look cleaner. There’s also some solder blobbing that could be tidied up, but hey, it’s functional (or it will be).
+
+Power rails are looking good, 5V and 3.3V are where they should be, and I’ve confirmed there are no shorts or open circuits on the test points. I haven’t flashed firmware yet because it turns out my old PicKit 3 is too old for the PIC I used, so I’m waiting on a new flasher before I can give it a real test.
+
+Background: The through-hole version was a university project, while the SMD version was my own follow-up challenge. I reverse-engineered the component choices from the original Velleman oscilloscope kit, looking up datasheets and selecting alternatives with similar or improved specs. The original Velleman was around 100x100mm. My through-hole version shrank it to 50x50mm (¼ the size), and the SMD version again cut that down to 25x25mm, or just 1/16 the original footprint. Everything was designed in Proteus 5, since that’s what we use at university.
+
+All in all, I’m really happy with how this turned out. It’s my first full SMD design and soldering job, and despite a few cosmetic hiccups, I think it came together nicely. The through-hole version could have looked neater, but given the part constraints of only using the Velleman kit parts, I’m proud of how compact I got it
